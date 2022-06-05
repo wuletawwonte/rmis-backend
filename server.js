@@ -1,14 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+const http = require("http");
+const app = require("./app");
 
 const PORT = 5000;
 
-// Middlewares
-app.use(cors());
-app.use(express.json());
+const server = http.createServer(app);
 
-
-app.listen(PORT, () => {
-  console.log("server listening at", PORT);
+server.listen(PORT, () => {
+  console.log("Server listening at ", PORT);
 });
