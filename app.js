@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes 
-app.use('/api/v/01/user', userRoutes);
+app.use('/api/v1/user', userRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Endpoint Not found');
